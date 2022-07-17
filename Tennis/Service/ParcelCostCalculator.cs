@@ -25,9 +25,9 @@ namespace LittleBoxes.Service
             }
         }
 
-        public Parcel CalculateParcelCost(int x, int y, int z)
+        public Parcel CalculateParcelCost(int x, int y, int z,bool speedyShipping)
         {
-            return CalculateParcelCost(new Parcel(x, y, z));
+            return CalculateParcelCost(new Parcel(x, y, z, speedyShipping));
         }
     }
 }
