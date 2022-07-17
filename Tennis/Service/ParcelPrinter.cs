@@ -20,7 +20,7 @@ namespace LittleBoxes.Service
             }
             if (parcels.Any(parcel =>parcel.speedyChipping))
             {
-                result += "speedy Shipping has been selected increasing the cost of the package by totalValue";
+                result += "speedy Shipping has been selected increasing the cost of the package by totalValue" + totalValue + "\n";
                 totalValue += totalValue;
             }
             result += "total cost = " + totalValue + "\n";

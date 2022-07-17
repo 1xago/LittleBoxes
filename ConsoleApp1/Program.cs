@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using LittleBoxes;
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
     static void Main()
@@ -38,6 +41,7 @@ public class Program
             parcelList.Add(parcelCostCalculator.CalculateParcelCost(parcelInfo[0], parcelInfo[1], parcelInfo[2],true));
         }
 
+        result = parcelPrinter.PrintParcels(parcelList);
         Console.WriteLine(result);
         Console.WriteLine("");
 
