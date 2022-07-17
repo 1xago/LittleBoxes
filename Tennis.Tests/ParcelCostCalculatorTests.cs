@@ -11,26 +11,26 @@ namespace Tennis.Tests
 
         private readonly List<object[]> _data = new List<object[]>
         {
-            new object[] {1, 2,3, LittleBoxes.Constants.Constants.SmallParcelCost},
-            new object[] {1, 9,3, LittleBoxes.Constants.Constants.SmallParcelCost},
-            new object[] {1, 2,6, LittleBoxes.Constants.Constants.SmallParcelCost},
-            new object[] {9, 2,9, LittleBoxes.Constants.Constants.SmallParcelCost},
+            new object[] {1, 2,3,1, LittleBoxes.Constants.Constants.SmallParcelCost},
+            new object[] {1, 9,3,1, LittleBoxes.Constants.Constants.SmallParcelCost},
+            new object[] {1, 2,6,2, LittleBoxes.Constants.Constants.SmallParcelCost + LittleBoxes.Constants.Constants.ExtraChargePerExtraWeight},
+            new object[] {9, 2,9,3, LittleBoxes.Constants.Constants.SmallParcelCost+ LittleBoxes.Constants.Constants.ExtraChargePerExtraWeight *2},
 
-            new object[] {10, 2,3, LittleBoxes.Constants.Constants.MediumParcelCost},
-            new object[] {1, 19,3, LittleBoxes.Constants.Constants.MediumParcelCost},
-            new object[] {1, 29,6, LittleBoxes.Constants.Constants.MediumParcelCost},
-            new object[] {49, 2,49, LittleBoxes.Constants.Constants.MediumParcelCost},
+            new object[] {10, 2,3,1, LittleBoxes.Constants.Constants.MediumParcelCost},
+            new object[] {1, 19,3,2, LittleBoxes.Constants.Constants.MediumParcelCost},
+            new object[] {1, 29,6,3, LittleBoxes.Constants.Constants.MediumParcelCost},
+            new object[] {49, 2,49,4, LittleBoxes.Constants.Constants.MediumParcelCost+ LittleBoxes.Constants.Constants.ExtraChargePerExtraWeight},
 
-                        new object[] {10, 2,51, LittleBoxes.Constants.Constants.LargeParcelCost},
-            new object[] {1,50,3, LittleBoxes.Constants.Constants.LargeParcelCost},
-            new object[] {1, 89,6, LittleBoxes.Constants.Constants.LargeParcelCost},
-            new object[] {99, 2,99, LittleBoxes.Constants.Constants.LargeParcelCost},
+                        new object[] {10, 2,51,1, LittleBoxes.Constants.Constants.LargeParcelCost},
+            new object[] {1,50,3,1, LittleBoxes.Constants.Constants.LargeParcelCost},
+            new object[] {1, 89,6,1, LittleBoxes.Constants.Constants.LargeParcelCost},
+            new object[] {99, 2,99,1, LittleBoxes.Constants.Constants.LargeParcelCost},
 
 
-            new object[] {10, 2,500, LittleBoxes.Constants.Constants.XlParcelCost},
-            new object[] {1, 500,3, LittleBoxes.Constants.Constants.XlParcelCost},
-            new object[] {500, 29,6, LittleBoxes.Constants.Constants.XlParcelCost},
-            new object[] {100, 2,100, LittleBoxes.Constants.Constants.XlParcelCost},
+            new object[] {10, 2,500,1, LittleBoxes.Constants.Constants.XlParcelCost},
+            new object[] {1, 500,3,1, LittleBoxes.Constants.Constants.XlParcelCost},
+            new object[] {500, 29,6,1, LittleBoxes.Constants.Constants.XlParcelCost},
+            new object[] {100, 2,100,10, LittleBoxes.Constants.Constants.XlParcelCost},
 
         };
 
@@ -51,9 +51,9 @@ namespace Tennis.Tests
 
         [Theory]
         [ClassData(typeof(TestDataGenerator))]
-        public void Tennis1Test(int x, int y, int z, int expected)
+        public void Tennis1Test(int x, int y, int z, int weight, int expected)
         {
-            CheckAllScores(_parcelCostCalculator.CalculateParcelCost(x, y, z).cost, expected);
+            CheckAllScores(_parcelCostCalculator.CalculateParcelCost(x, y, z, weight).cost, expected);
         }
 
 

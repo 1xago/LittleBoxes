@@ -13,22 +13,22 @@ public class Program
         Console.WriteLine("Hi");
  
         var parcelInformation1 = new List<int[]>();
-        parcelInformation1.Add(new int[] { 1, 2, 3 });
-        parcelInformation1.Add(new int[] { 1, 2, 9 });
-        parcelInformation1.Add(new int[] { 1, 20, 3 });
-        parcelInformation1.Add(new int[] { 1, 2, 300 });
+        parcelInformation1.Add(new int[] { 1, 2, 3,1 });
+        parcelInformation1.Add(new int[] { 1, 2, 9,1 });
+        parcelInformation1.Add(new int[] { 1, 20, 3,1 });
+        parcelInformation1.Add(new int[] { 1, 2, 300,1 });
 
         var parcelInformation2 = new List<int[]>();
-        parcelInformation2.Add(new int[] { 1, 2, 3 });
-        parcelInformation2.Add(new int[] { 1, 2, 9 });
-        parcelInformation2.Add(new int[] { 1, 20, 3 });
-        parcelInformation2.Add(new int[] { 1, 2, 300 });
+        parcelInformation2.Add(new int[] { 1, 2, 3,1 });
+        parcelInformation2.Add(new int[] { 1, 2, 9 ,1});
+        parcelInformation2.Add(new int[] { 1, 20, 3 ,1});
+        parcelInformation2.Add(new int[] { 1, 2, 300,1 });
 
         var parcelList = new List<Parcel>();
 
         foreach(var parcelInfo in parcelInformation1)
         {
-            parcelList.Add(parcelCostCalculator.CalculateParcelCost(parcelInfo[0], parcelInfo[1], parcelInfo[2],false));
+            parcelList.Add(parcelCostCalculator.CalculateParcelCost(parcelInfo[0], parcelInfo[1], parcelInfo[2], parcelInfo[3],false));
         }
         var result = parcelPrinter.PrintParcels(parcelList);
         Console.WriteLine(result);
@@ -38,7 +38,7 @@ public class Program
 
         foreach (var parcelInfo in parcelInformation2)
         {
-            parcelList.Add(parcelCostCalculator.CalculateParcelCost(parcelInfo[0], parcelInfo[1], parcelInfo[2],true));
+            parcelList.Add(parcelCostCalculator.CalculateParcelCost(parcelInfo[0], parcelInfo[1], parcelInfo[2], parcelInfo[3], true));
         }
 
         result = parcelPrinter.PrintParcels(parcelList);
