@@ -53,7 +53,7 @@ namespace Tennis.Tests
         [ClassData(typeof(TestDataGenerator))]
         public void Tennis1Test(int x, int y, int z, int expected)
         {
-            CheckAllScores(_parcelCostCalculator.CalculateParcelCost(x, y, z), expected);
+            CheckAllScores(_parcelCostCalculator.CalculateParcelCost(x, y, z).cost, expected);
         }
 
 

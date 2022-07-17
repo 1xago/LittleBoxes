@@ -5,23 +5,27 @@ namespace LittleBoxes.Service
 {
     public class ParcelCostCalculator
     {
-        public int CalculateParcelCost(Parcel parcel)
+        public Parcel CalculateParcelCost(Parcel parcel)
         {
 
             switch (Math.Max(parcel.x, Math.Max(parcel.y, parcel.z)))
             {
                 case < Constants.Constants.SmallParcelMaxDimention:
-                    return Constants.Constants.SmallParcelCost;
+                    parcel.cost = Constants.Constants.SmallParcelCost;
+                    return parcel;
                 case < Constants.Constants.MediumParcelMaxDimention:
-                    return Constants.Constants.MediumParcelCost;
+                    parcel.cost = Constants.Constants.MediumParcelCost;
+                    return parcel;
                 case < Constants.Constants.LargeParcelMaxDimention:
-                    return Constants.Constants.LargeParcelCost;
+                    parcel.cost = Constants.Constants.LargeParcelCost;
+                    return parcel;
                 default:
-                    return Constants.Constants.XlParcelCost;
+                    parcel.cost = Constants.Constants.XlParcelCost;
+                    return parcel;
             }
         }
 
-        public int CalculateParcelCost(int x, int y, int z)
+        public Parcel CalculateParcelCost(int x, int y, int z)
         {
             return CalculateParcelCost(new Parcel(x, y, z));
         }

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittleBoxes", "Tennis\Littl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittleBoxes.Tests", "Tennis.Tests\LittleBoxes.Tests.csproj", "{173B2D39-AEB3-4B75-B0B6-D4B09997F65C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{173B2D39-AEB3-4B75-B0B6-D4B09997F65C}.Release|x64.Build.0 = Release|Any CPU
 		{173B2D39-AEB3-4B75-B0B6-D4B09997F65C}.Release|x86.ActiveCfg = Release|Any CPU
 		{173B2D39-AEB3-4B75-B0B6-D4B09997F65C}.Release|x86.Build.0 = Release|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Debug|x64.Build.0 = Debug|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Debug|x86.Build.0 = Debug|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Release|x64.ActiveCfg = Release|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Release|x64.Build.0 = Release|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Release|x86.ActiveCfg = Release|Any CPU
+		{3C0628F7-BFAD-4DCA-B8DD-A4118F76FECC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
